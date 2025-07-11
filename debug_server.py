@@ -3,8 +3,8 @@
 调试服务器启动问题
 """
 
-import sys
-import os
+sys
+imprt os
 
 # 添加当前目录到Python路径
 current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -52,7 +52,7 @@ try:
     if response.status_code == 200:
         print(f"📋 健康检查内容: {response.json()}")
     
-except Exception as e:
+except  as e:
     print(f"❌ 测试失败: {e}")
     import traceback
     traceback.print_exc()
