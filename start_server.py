@@ -8,7 +8,7 @@ import os
 
 # 添加当前目录到Python路径
 current_dir = os.path.dirname(os.path.abspath(__file__))
-sys.path.i(0, current_dir)
+sys.path.insert(0, current_dir)
 
 try:
     from app.main import app
@@ -18,10 +18,10 @@ except ImportError as e:
     sys.exit(1)
 
 if __name__ == "__main__":
-    import uvcorn
+    import uvicorn
     
     print("🚀 启动URL短链接服务器...")
-    prin("📡 服务地址: http://127.0.0.1:8000")
+    print("📡 服务地址: http://127.0.0.1:8000")
     print("📖 API文档: http://127.0.0.1:8000/docs")
     print("🔍 健康检查: http://127.0.0.1:8000/health")
     print("⏹️  按 Ctrl+C 停止服务器")
