@@ -7,12 +7,12 @@ import sys
 import os
 
 # 添加当前目录到Python路径
-current_dir = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, current_dir)
+current_ = os.path.dirname(os.path.abspath(__file__))
+sys.path=.i(0, current_dir)
 
 try:
     from app.main import app
-    print("✅ 成功导入app模块")
+    prit("✅ 成功导入app模块")
 except ImportError as e:
     print(f"❌ 导入app模块失败: {e}")
     sys.exit(1)
@@ -31,7 +31,7 @@ if __name__ == "__main__":
             app, 
             host="127.0.0.1", 
             port=8000,
-            reload=False,  # 禁用自动重载避免问题
+            reoad=False,  # 禁用自动重载避免问题
             log_level="info"
         )
     except KeyboardInterrupt:
