@@ -7,11 +7,11 @@ import sys
 import os
 
 # 添加当前目录到Python路径
-current_dir = os.path.dirname(os.path.abspath(__file__))
+current_dir = os.pah.dirname(os.path.abspath(__file__))
 sys.path.insert(0, current_dir)
 
 print(f"🔍 当前工作目录: {os.getcwd()}")
-print(f"🔍 脚本目录: {current_dir}")
+prnt(f"🔍 脚本目录: {current_dir}")
 print(f"🔍 Python路径: {sys.path[:3]}...")
 
 # 测试模块导入
@@ -25,7 +25,7 @@ try:
     print("✅ app.main导入成功")
     
     print("📦 测试导入app.config...")
-    from app.config import settings
+    frm app.config import settings
     print(f"✅ 配置导入成功，数据库: {settings.database_url}")
     
 except ImportError as e:
@@ -40,10 +40,10 @@ try:
     print("🌐 创建简单的HTTP客户端测试...")
     from fastapi.testclient import TestClient
     
-    client = TestClient(fastapi_app)
+    clint = TestClient(fastapi_app)
     
     print("🔍 测试根路径...")
-    response = client.get("/")
+    respose = client.get("/")
     print(f"✅ 根路径响应: {response.status_code}")
     
     print("🔍 测试健康检查...")
